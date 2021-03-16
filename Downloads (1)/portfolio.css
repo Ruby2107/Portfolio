@@ -8,17 +8,93 @@
 html{
 	overflow-x:hidden;
 }
-  
+.header {
+  width: 100%;
+  height: 100vh;
+} 
   nav{
 	  background:red;
 	  height:80px;
 	  width:100%;
 	  position:fixed;
-	  z-index:9999;
-   
-    
+	  z-index:2;  
 }
-  
+
+.landing-text {
+  position: relative;
+  padding-top: 5rem;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  text-align: center;
+}
+
+.landing-text h1 {
+  font-size: 20rem;
+  font-family: 'The Historia Demo', Sans-sarif;
+  background: linear-gradient(to top, #ffe838, #fd57bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  user-select: none;
+}
+
+.landing-text h6 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+/* start about */
+
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-heading {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0;
+  margin-bottom: 6rem;
+}
+
+.about-heading h1 {
+  font-size: 10rem;
+  opacity: 0.3;
+}
+
+.about-heading h6 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.Ruby-img {
+  flex: 1;
+  margin-right: 5rem;
+}
+
+.about-details {
+  flex: 1;
+}
+
+.social-media {
+  margin-top: 5rem;
+}
+
+.social-media i {
+  font-size: 4rem;
+  transition: color 650ms;
+  padding: 0.1rem 1rem;
+
+}
+ul#menu li{
+  display: inline;
+}
+
+.fa-facebook-square:hover {
+  color: #38a1f3;
+}  
   a.logo {
     font-size: 36px;
     line-height: 80px;
@@ -45,8 +121,8 @@ nav ul li a{
 	border-radius:3px;
 }
 
-a.active,a:hover{
-	background:blue;
+factive,a:hover{
+	background:rgb(10, 10, 87);
 	transition:.5s;
 	
 }
@@ -71,7 +147,8 @@ a.active,a:hover{
   body{
     height:100%;
     width:100%;
-      background : url("11.jpg");
+      /* background : url("11.jpg"); */
+      background-color: rgb(39, 22, 54);
   background-size:cover;
   overflow-x:hidden;
   }
@@ -113,7 +190,7 @@ a.active,a:hover{
     align-items: center;
     padding: 2rem;
 	background: rgba(0,0,0,0.05);
-    box-shadow: 0px 4px 8px 3px #ffff006b;
+    box-shadow: 0px 4px 8px 3px #0808086b;
 	transition:transform 0.8S;
 	cursor:pointer;
 	
@@ -151,7 +228,7 @@ a.active,a:hover{
 	   text-align:center;
    }
      .icon-container i{
-		 color:red;
+		 color:rgb(241, 255, 47);
 		font-size:50px!important;
 		text-align:center;
 		line-height:100px;
@@ -269,18 +346,21 @@ a.active,a:hover{
     outline-color: #Fd57bf;
   }
   input [type="submit"]{
-    width: initial;
+    width: 50%;
     background-color: #fd57bf;
     color: #eee;
     padding:1rem 2rem;
-    border-radius: .8rem;
-    cursor:pointer;
+    border-radius: 8px;
+    /* cursor:pointer; */
     transition: background-color 650ms;
+    display: inline;
   }
   input [type="submit"]:hover{
     color: #221e3f;
     background-color: #ffe838;
   }
+
+  
   /* end contact */
   /* start footer */
   .copyright {
@@ -359,6 +439,8 @@ a.active,a:hover{
     margin-right: 5rem;
   }
   /* end reusable code */
+
+  
   /* start animations */
   
     .icon-container {
@@ -573,4 +655,92 @@ form label {
     padding: 1rem 0;
     position: relative;
 }
+}
+
+
+
+ /* next trial */
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navbar {
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
 }
